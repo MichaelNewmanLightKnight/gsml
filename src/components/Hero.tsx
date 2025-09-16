@@ -11,7 +11,7 @@ const Hero = () => {
           alt="Nigerian Freight Forwarding Operations with Cargo Ships and Container Terminals" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-hero opacity-80"></div>
+        <div className="absolute inset-0 bg-gradient-hero opacity-40"></div>
       </div>
 
       {/* Animated Grid Overlay */}
@@ -23,11 +23,10 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-6 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 animate-fade-in">
-            One of Lagos' Most{" "}
             <span className="text-transparent bg-clip-text bg-gradient-accent">
               Innovative
             </span>
-            {" "}Tech-Enabled Freight Forwarding Companies
+            {" "}Freight Forwarding
           </h1>
           
           <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto animate-slide-up">
