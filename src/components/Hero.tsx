@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-port.jpg";
+import heroImage from "@/assets/hero-freight-africa.jpg";
 
 const Hero = () => {
   return (
@@ -8,7 +8,7 @@ const Hero = () => {
       <div className="absolute inset-0">
         <img 
           src={heroImage} 
-          alt="Lagos Port with Digital Technology Overlay" 
+          alt="Nigerian Freight Forwarding Operations with Cargo Ships and Container Terminals" 
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-hero opacity-80"></div>
@@ -41,24 +41,6 @@ const Hero = () => {
             <Button variant="outline-light" size="xl" className="px-12">
               Talk to an Expert
             </Button>
-          </div>
-        </div>
-
-        {/* Floating Stats */}
-        <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 hidden lg:block">
-          <div className="flex space-x-12 text-white">
-            <div className="text-center animate-float">
-              <div className="text-3xl font-bold text-accent">500+</div>
-              <div className="text-sm opacity-80">Shipments Cleared</div>
-            </div>
-            <div className="text-center animate-float" style={{animationDelay: '1s'}}>
-              <div className="text-3xl font-bold text-accent">24/7</div>
-              <div className="text-sm opacity-80">Customer Support</div>
-            </div>
-            <div className="text-center animate-float" style={{animationDelay: '2s'}}>
-              <div className="text-3xl font-bold text-accent">99%</div>
-              <div className="text-sm opacity-80">On-Time Delivery</div>
-            </div>
           </div>
         </div>
       </div>

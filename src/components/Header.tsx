@@ -11,7 +11,7 @@ const Header = () => {
               <div className="w-8 h-8 bg-gradient-accent rounded-lg flex items-center justify-center">
                 <span className="text-accent-foreground font-bold text-lg">G</span>
               </div>
-              <span className="text-xl font-bold text-primary">GMSL</span>
+              <span className="text-xl font-bold text-primary">GSM Logistics</span>
             </Link>
           </div>
           
