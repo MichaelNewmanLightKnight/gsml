@@ -11,7 +11,7 @@ const Hero = () => {
           alt="Nigerian Freight Forwarding Operations with Cargo Ships and Container Terminals" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-hero opacity-40"></div>
+        <div className="absolute inset-0 bg-gradient-hero opacity-20"></div>
       </div>
 
       {/* Animated Grid Overlay */}
@@ -30,14 +30,6 @@ const Hero = () => {
             Transparent supply chains, reliable customs clearance, and smarter logistics for modern businesses.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-slide-up">
-            <Button variant="hero" size="xl" className="px-12">
-              Request a Quote
-            </Button>
-            <Button variant="outline-light" size="xl" className="px-12">
-              Talk to an Expert
-            </Button>
-          </div>
         </div>
       </div>
     </section>

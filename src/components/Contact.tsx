@@ -70,9 +70,6 @@ const Contact = () => {
 
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="hero" size="lg" className="px-12">
-              Request a Quote
-            </Button>
             <Button variant="outline-light" size="lg" className="px-12">
               Book a Consultation
             </Button>
