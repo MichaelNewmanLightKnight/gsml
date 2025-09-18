@@ -15,6 +15,12 @@ const Header = () => {
               />
             </Link>
           </div>
+
+          <div className="flex-1 flex justify-center">
+            <span className="text-xl font-bold text-primary hidden lg:block">
+              Great Success Multinational Logistics
+            </span>
+          </div>
           
           <div className="hidden md:flex items-center space-x-8">
             <a href="#about" className="text-muted-foreground hover:text-primary transition-colors">About</a>
