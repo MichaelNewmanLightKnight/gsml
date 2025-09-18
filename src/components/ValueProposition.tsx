@@ -86,7 +86,7 @@ const ValueProposition = () => {
                     With commitment and vision,
                   </p>
                   <p className="text-lg font-semibold text-primary mb-1">
-                    Adeola Adeyemi
+                    Ajayi Adeola Olorunshogo
                   </p>
                   <p className="text-sm text-muted-foreground">
                     Chief Executive Officer, GSM Logistics (GSML)
