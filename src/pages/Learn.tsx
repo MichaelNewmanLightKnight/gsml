@@ -121,8 +121,7 @@ const Learn = () => {
                       variant="ghost" 
                       className="group/btn w-full justify-between hover:bg-primary/5"
                       onClick={() => {
-                        const element = document.getElementById(article.id);
-                        element?.scrollIntoView({ behavior: 'smooth' });
+                        window.location.href = `/articles#${article.id}`;
                       }}
                     >
                       <span>Read Article</span>
@@ -144,14 +143,6 @@ const Learn = () => {
             <p className="text-accent-foreground/80 mb-8 max-w-2xl mx-auto">
               Put these insights into practice with GMSL's tech-enabled freight forwarding solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="outline-light">
-                Request a Quote
-              </Button>
-              <Button size="lg" variant="secondary">
-                Talk to an Expert
-              </Button>
-            </div>
           </div>
         </section>
       </main>

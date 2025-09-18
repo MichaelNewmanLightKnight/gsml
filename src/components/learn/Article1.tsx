@@ -165,21 +165,6 @@ const Article1 = () => {
             </p>
           </section>
         </div>
-
-        {/* CTA */}
-        <div className="text-center py-12 bg-gradient-primary/10 rounded-2xl">
-          <h3 className="text-2xl font-bold text-foreground mb-4">
-            Ready to clear your goods faster?
-          </h3>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="shadow-soft hover:shadow-medium">
-              Request a Quote
-            </Button>
-            <Button size="lg" variant="outline">
-              Talk to an Expert
-            </Button>
-          </div>
-        </div>
       </div>
     </article>
   );

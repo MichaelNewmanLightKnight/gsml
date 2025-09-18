@@ -245,17 +245,6 @@ const Article5 = () => {
             </p>
           </section>
         </div>
-
-        {/* CTA */}
-        <div className="text-center py-12 bg-gradient-primary rounded-2xl">
-          <h3 className="text-2xl font-bold text-primary-foreground mb-4">
-            Expand your business across Africa
-          </h3>
-          <p className="text-primary-foreground/90 mb-6">Partner with GMSL as your logistics gateway to continental success</p>
-          <Button size="lg" variant="outline-light" className="shadow-soft hover:shadow-medium">
-            Start Your AfCFTA Journey
-          </Button>
-        </div>
       </div>
     </article>
   );
