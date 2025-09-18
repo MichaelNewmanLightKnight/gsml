@@ -45,7 +45,7 @@ const ValueProposition = () => {
                 <img 
                   src={adeolaImage} 
                   alt="CEO of Great Success Multinational Logistics" 
-                  className="w-full h-[600px] object-cover"
+                  className="w-full h-[600px] object-cover object-top"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent"></div>
               </div>

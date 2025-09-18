@@ -11,7 +11,7 @@ const Header = () => {
               <img 
                 src={gsmlLogo} 
                 alt="Great Success Multinational Logistics" 
-                className="w-24 h-16 object-contain"
+                className="w-32 h-20 object-contain"
               />
             </Link>
           </div>
