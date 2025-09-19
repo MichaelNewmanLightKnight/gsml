@@ -5,6 +5,13 @@ import { ArrowRight, BookOpen, Clock, Tag } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
+// Import article thumbnails
+import lagosPortsImage from "@/assets/article-lagos-ports-clearance.jpg";
+import hiddenCostsImage from "@/assets/article-hidden-costs-freight.jpg";
+import transparencyImage from "@/assets/article-supply-chain-transparency.jpg";
+import techFreightImage from "@/assets/article-tech-freight-africa.jpg";
+import afcftaImage from "@/assets/article-afcfta-preparation.jpg";
+
 const articles = [
   {
     id: "clear-goods-fast",
@@ -12,7 +19,7 @@ const articles = [
     description: "Learn expert tips on customs documentation, freight forwarding, and avoiding costly delays in Nigeria's busiest trade hub.",
     category: "Customs & Clearance",
     readTime: "8 min read",
-    image: "/placeholder.svg"
+    image: lagosPortsImage
   },
   {
     id: "hidden-costs",
@@ -20,7 +27,7 @@ const articles = [
     description: "Discover how to identify and reduce extra charges like demurrage, handling fees, and documentation errors.",
     category: "Cost Optimization",
     readTime: "6 min read",
-    image: "/placeholder.svg"
+    image: hiddenCostsImage
   },
   {
     id: "supply-chain-transparency",
@@ -28,7 +35,7 @@ const articles = [
     description: "Learn why visibility, trust, and digital tracking are the future of logistics in Nigeria.",
     category: "Digital Transformation",
     readTime: "5 min read",
-    image: "/placeholder.svg"
+    image: transparencyImage
   },
   {
     id: "tech-freight-forwarding",
@@ -36,7 +43,7 @@ const articles = [
     description: "See how digital tools improve efficiency, compliance, and cost savings in African logistics.",
     category: "Technology",
     readTime: "7 min read",
-    image: "/placeholder.svg"
+    image: techFreightImage
   },
   {
     id: "afcfta-preparation",
@@ -44,7 +51,7 @@ const articles = [
     description: "Learn how to prepare your supply chain and logistics for Africa's largest free trade agreement.",
     category: "Trade Policy",
     readTime: "9 min read",
-    image: "/placeholder.svg"
+    image: afcftaImage
   }
 ];
 
@@ -98,8 +105,13 @@ const Learn = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredArticles.map((article) => (
                 <Card key={article.id} className="group hover:shadow-strong transition-all duration-300 overflow-hidden border-border/50 hover:border-primary/50">
-                  <div className="aspect-video bg-gradient-primary/10 relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20" />
+                  <div className="aspect-video relative overflow-hidden">
+                    <img 
+                      src={article.image} 
+                      alt={article.title}
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
                     <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
                       <span className="text-xs font-medium text-primary">{article.category}</span>
                     </div>
