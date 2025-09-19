@@ -35,10 +35,7 @@ const Contact = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Let's Move Freight{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-accent">
-              Together
-            </span>
+            Move Freight In a Smarter Way
           </h2>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
             Move Freight Smarter, Together
