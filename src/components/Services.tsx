@@ -65,11 +65,6 @@ const Services = () => {
           ))}
         </div>
 
-        <div className="text-center">
-          <Button variant="cta" size="lg">
-            Explore All Services
-          </Button>
-        </div>
       </div>
     </section>
   );

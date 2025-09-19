@@ -38,7 +38,7 @@ const Contact = () => {
             Move Freight In a Smarter Way
           </h2>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Move Freight Smarter, Together
+            Ready to streamline your logistics? Get in touch with our experts today.
           </p>
         </div>
 
@@ -65,15 +65,100 @@ const Contact = () => {
           ))}
         </div>
 
-        <div className="text-center">
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="outline-light" size="lg" className="px-12">
-              Book a Consultation
-            </Button>
-          </div>
-          <p className="text-white/70 mt-6">
-            "Ready to move freight smarter? Let GMSL handle it."
-          </p>
+        {/* Contact Form */}
+        <div className="max-w-2xl mx-auto">
+          <Card className="p-8 bg-white/10 backdrop-blur-sm border-white/20">
+            <form className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="firstName" className="block text-sm font-medium text-white mb-2">
+                    First Name
+                  </label>
+                  <input
+                    type="text"
+                    id="firstName"
+                    className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent backdrop-blur-sm"
+                    placeholder="Enter your first name"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="lastName" className="block text-sm font-medium text-white mb-2">
+                    Last Name
+                  </label>
+                  <input
+                    type="text"
+                    id="lastName"
+                    className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent backdrop-blur-sm"
+                    placeholder="Enter your last name"
+                  />
+                </div>
+              </div>
+              
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent backdrop-blur-sm"
+                  placeholder="Enter your email address"
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="phone" className="block text-sm font-medium text-white mb-2">
+                  Phone Number
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent backdrop-blur-sm"
+                  placeholder="Enter your phone number"
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="service" className="block text-sm font-medium text-white mb-2">
+                  Service Required
+                </label>
+                <select
+                  id="service"
+                  className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent backdrop-blur-sm"
+                >
+                  <option value="" className="bg-primary text-white">Select a service</option>
+                  <option value="freight-forwarding" className="bg-primary text-white">Freight Forwarding</option>
+                  <option value="customs-clearance" className="bg-primary text-white">Customs Clearance</option>
+                  <option value="warehousing" className="bg-primary text-white">Warehousing & Distribution</option>
+                  <option value="supply-chain" className="bg-primary text-white">Supply Chain Management</option>
+                  <option value="consultation" className="bg-primary text-white">Consultation</option>
+                </select>
+              </div>
+              
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  rows={4}
+                  className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent backdrop-blur-sm resize-none"
+                  placeholder="Tell us about your logistics needs..."
+                ></textarea>
+              </div>
+              
+              <div className="text-center">
+                <Button 
+                  type="submit" 
+                  variant="outline-light" 
+                  size="lg" 
+                  className="px-12 py-3 bg-gradient-accent hover:bg-gradient-accent/90 text-accent-foreground border-0 font-semibold"
+                >
+                  Send Message
+                </Button>
+              </div>
+            </form>
+          </Card>
         </div>
       </div>
     </section>

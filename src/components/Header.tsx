@@ -14,10 +14,7 @@ const Header = () => {
                 className="w-48 h-32 object-contain"
               />
             </Link>
-          </div>
-
-          <div className="flex-1 flex justify-center">
-            <span className="text-xl font-bold text-primary hidden lg:block">
+            <span className="text-2xl md:text-3xl font-bold bg-gradient-accent bg-clip-text text-transparent ml-4 hidden lg:block">
               Great Success Multinational Logistics
             </span>
           </div>
