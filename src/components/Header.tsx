@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import gsmlLogo from "@/assets/gsml-logo-new.webp";
+import gsmlLogo from "@/assets/gsml-logo-new.jpg";
 
 const Header = () => {
   return (
@@ -11,7 +11,7 @@ const Header = () => {
               <img 
                 src={gsmlLogo} 
                 alt="Great Success Multinational Logistics" 
-                className="w-36 h-24 object-contain"
+                className="w-48 h-32 object-contain"
               />
             </Link>
           </div>

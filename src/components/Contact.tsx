@@ -7,13 +7,13 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Office Location",
-      details: "Apapa, Lagos",
+      details: "4th Avenue, Nitel Estate, Grammar School, Ikorodu - Lagos",
       action: "View on Map"
     },
     {
       icon: Phone,
       title: "Phone",
-      details: "234 802 966 7839",
+      details: "09092926249, 08029667839",
       action: "Call Now"
     },
     {
@@ -25,7 +25,7 @@ const Contact = () => {
     {
       icon: MessageCircle,
       title: "WhatsApp",
-      details: "234 802 966 7839",
+      details: "09092926249, 08029667839",
       action: "Chat Now"
     }
   ];
