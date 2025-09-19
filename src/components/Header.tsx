@@ -20,11 +20,11 @@ const Header = () => {
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/#about" className="text-muted-foreground hover:text-primary transition-colors">About</Link>
-            <Link to="/#services" className="text-muted-foreground hover:text-primary transition-colors">Services</Link>
-            <Link to="/#industries" className="text-muted-foreground hover:text-primary transition-colors">Industries</Link>
+            <Link to="/" className="text-muted-foreground hover:text-primary transition-colors">About</Link>
+            <Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">Services</Link>
+            <Link to="/industries" className="text-muted-foreground hover:text-primary transition-colors">Industries</Link>
             <Link to="/learn" className="text-muted-foreground hover:text-primary transition-colors">Learn</Link>
-            <Link to="/#contact" className="text-muted-foreground hover:text-primary transition-colors">Contact</Link>
+            <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">Contact</Link>
           </div>
         </nav>
       </div>
