@@ -27,7 +27,7 @@ const Hero = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto animate-slide-up">
-            Transparent supply chains, reliable customs clearance, and smarter logistics for modern businesses.
+            Move Freight In a Smarter Way
           </p>
 
         </div>

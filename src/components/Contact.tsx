@@ -41,7 +41,7 @@ const Contact = () => {
             </span>
           </h2>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Ready to experience smarter logistics? Get in touch with our team for a consultation or quote.
+            Move Freight Smarter, Together
           </p>
         </div>
 
