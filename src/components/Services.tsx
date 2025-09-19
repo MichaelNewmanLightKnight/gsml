@@ -97,7 +97,7 @@ const Services = () => {
         {/* Call to Action Section */}
         <Card className="p-8 md:p-12 bg-gradient-accent text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-accent-foreground mb-6">
-            Let's Move Freight Together
+            Get Started Today
           </h2>
           <p className="text-lg text-accent-foreground/80 mb-8 max-w-3xl mx-auto leading-relaxed">
             Your business deserves logistics solutions that are seamless, dependable, and built around your goals. With us, you gain more than a service provider — you gain a partner committed to making every shipment a success.
