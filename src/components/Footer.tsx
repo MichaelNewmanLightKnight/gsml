@@ -27,7 +27,6 @@ const Footer = () => {
             <ul className="space-y-2 text-primary-foreground/80">
               <li><Link to="/#services" className="hover:text-accent transition-colors">Services</Link></li>
               <li><Link to="/#industries" className="hover:text-accent transition-colors">Industries</Link></li>
-              <li><Link to="/#technology" className="hover:text-accent transition-colors">Technology</Link></li>
               <li><Link to="/#about" className="hover:text-accent transition-colors">About Us</Link></li>
             </ul>
           </div>
@@ -36,7 +35,7 @@ const Footer = () => {
             <h3 className="font-semibold mb-4">Contact Info</h3>
             <ul className="space-y-2 text-primary-foreground/80 text-sm">
               <li>Apapa, Lagos</li>
-              <li>+234 XXX XXX XXXX</li>
+              <li>234 802 966 7839</li>
               <li>info@gmsl.com.ng</li>
             </ul>
           </div>

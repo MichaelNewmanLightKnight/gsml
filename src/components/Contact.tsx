@@ -13,7 +13,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone",
-      details: "+234 XXX XXX XXXX",
+      details: "234 802 966 7839",
       action: "Call Now"
     },
     {
@@ -25,7 +25,7 @@ const Contact = () => {
     {
       icon: MessageCircle,
       title: "WhatsApp",
-      details: "+234 XXX XXX XXXX",
+      details: "234 802 966 7839",
       action: "Chat Now"
     }
   ];

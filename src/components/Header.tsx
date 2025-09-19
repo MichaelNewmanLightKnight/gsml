@@ -11,7 +11,7 @@ const Header = () => {
               <img 
                 src={gsmlLogo} 
                 alt="Great Success Multinational Logistics" 
-                className="w-32 h-20 object-contain"
+                className="w-36 h-24 object-contain"
               />
             </Link>
           </div>
@@ -27,7 +27,6 @@ const Header = () => {
             <Link to="/#services" className="text-muted-foreground hover:text-primary transition-colors">Services</Link>
             <Link to="/#industries" className="text-muted-foreground hover:text-primary transition-colors">Industries</Link>
             <Link to="/learn" className="text-muted-foreground hover:text-primary transition-colors">Learn</Link>
-            <Link to="/#technology" className="text-muted-foreground hover:text-primary transition-colors">Technology</Link>
             <Link to="/#contact" className="text-muted-foreground hover:text-primary transition-colors">Contact</Link>
           </div>
         </nav>
