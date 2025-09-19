@@ -36,7 +36,7 @@ const Footer = () => {
             <ul className="space-y-2 text-primary-foreground/80 text-sm">
               <li>Apapa, Lagos</li>
               <li>234 802 966 7839</li>
-              <li>info@gmsl.com.ng</li>
+              <li>info@gsmlogistics.site</li>
             </ul>
           </div>
         </div>

@@ -146,17 +146,6 @@ const Learn = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-accent">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold text-accent-foreground mb-6">
-              Ready to Apply What You've Learned?
-            </h2>
-            <p className="text-accent-foreground/80 mb-8 max-w-2xl mx-auto">
-              Put these insights into practice with GMSL's tech-enabled freight forwarding solutions.
-            </p>
-          </div>
-        </section>
       </main>
       <Footer />
     </>

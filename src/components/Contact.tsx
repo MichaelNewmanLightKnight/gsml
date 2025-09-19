@@ -19,7 +19,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      details: "info@gmsl.com.ng",
+      details: "info@gsmlogistics.site",
       action: "Send Email"
     },
     {
