@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 
 // Import article thumbnails
 import lagosPortsImage from "@/assets/article-lagos-ports-clearance.jpg";
-import hiddenCostsImage from "@/assets/article-hidden-costs-freight.jpg";
+import hiddenCostsImage from "@/assets/article-hidden-costs-new.jpg";
 import transparencyImage from "@/assets/article-supply-chain-transparency.jpg";
 import techFreightImage from "@/assets/article-tech-freight-africa.jpg";
 import afcftaImage from "@/assets/article-afcfta-preparation.jpg";
