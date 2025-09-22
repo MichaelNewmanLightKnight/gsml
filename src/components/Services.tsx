@@ -1,9 +1,39 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Ship, Warehouse, Truck, Smartphone, Phone, MapPin, MessageCircle, CheckCircle } from "lucide-react";
+import { Ship, Warehouse, Truck, Smartphone, Phone, MapPin, MessageCircle, CheckCircle, Globe, FileText, Users, Package, Eye } from "lucide-react";
 
 const Services = () => {
   const services = [
+    {
+      icon: Globe,
+      title: "Export Solutions",
+      shortDescription: "From factory floor to foreign market, we make export simple, reliable, and growth-driven.",
+      longDescription: "From factory floor to foreign market, we make export simple, reliable, and growth-driven. Whether you're a first-time exporter or a seasoned global trader, our solutions are tailored to help you break barriers, expand reach, and deliver with confidence. We don't just move cargo — we open doors to new opportunities, ensuring your goods reach the right markets at the right time, with every requirement taken care of."
+    },
+    {
+      icon: FileText,
+      title: "Export Documentation & Compliance",
+      shortDescription: "Precision paperwork and compliance management for stress-free exports.",
+      longDescription: "Exporting requires precision, and compliance is non-negotiable. Our team ensures every shipment is backed by the correct paperwork: export licenses, commercial invoices, packing lists, certificates of origin, and letters of credit. We stay ahead of changing trade laws and country-specific regulations to guarantee that your cargo clears without setbacks. By removing guesswork and reducing errors, we help you avoid costly penalties and delays, keeping your exports compliant and stress-free."
+    },
+    {
+      icon: Users,
+      title: "Market Access & Trade Facilitation", 
+      shortDescription: "Navigate international markets with expert trade facilitation support.",
+      longDescription: "Selling overseas is about more than transport — it's about reaching the right buyers. With our network of international partners and trade facilitation experts, we help businesses identify target markets, meet import requirements abroad, and align shipments with buyer specifications. From navigating trade agreements to leveraging tariff advantages, we make sure your exports are competitive on a global scale. Whether you're expanding into one country or multiple regions, we create a clear path for your products to succeed."
+    },
+    {
+      icon: Package,
+      title: "Cargo Handling & Shipping Solutions",
+      shortDescription: "Optimal transport solutions matched to your cargo type and timeline.",
+      longDescription: "Different markets require different modes of transport — and we offer them all. From full-container loads (FCL) and less-than-container loads (LCL) to air freight and multimodal solutions, we match the best method to your cargo type, timeline, and budget. Our partnerships with leading carriers ensure space availability and priority scheduling, while our cargo handling team guarantees secure packing, labeling, and load optimization. The result: exports that move smoothly, cost-effectively, and safely — no matter the distance."
+    },
+    {
+      icon: Eye,
+      title: "End-to-End Visibility & Support",
+      shortDescription: "Complete tracking and 24/7 support from port to buyer.",
+      longDescription: "Exporting doesn't end when goods leave your port — it ends when they reach your buyer. That's why we provide real-time tracking, digital documentation access, and 24/7 customer support to keep you in control at every stage. Our export specialists are available to answer questions, resolve challenges, and adapt solutions to your business needs. By combining technology with personal support, we give you confidence in every transaction, ensuring your reputation grows with each successful delivery."
+    },
     {
       icon: Ship,
       title: "Freight Forwarding & Customs Clearance",
