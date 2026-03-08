@@ -29,7 +29,7 @@ const PasswordGate = ({ children }: { children: React.ReactNode }) => {
         <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6">
           <Lock className="w-8 h-8 text-primary" />
         </div>
-        <h1 className="text-2xl font-bold text-foreground mb-2">Site Under Maintenance</h1>
+        <h1 className="text-2xl font-bold text-foreground mb-2">Password Required</h1>
         <p className="text-muted-foreground mb-8">This site is currently restricted. Please enter the password to continue.</p>
         <form onSubmit={handleSubmit} className="space-y-4">
           <Input
