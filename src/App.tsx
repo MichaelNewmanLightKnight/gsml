@@ -20,8 +20,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <PasswordGate>
-        <BrowserRouter>
+      <BrowserRouter>
           <Routes>
             <Route path="/" element={<About />} />
             <Route path="/services" element={<ServicesPage />} />
