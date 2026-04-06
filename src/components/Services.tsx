@@ -1,8 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Ship, Warehouse, Truck, Smartphone, Phone, MapPin, MessageCircle, CheckCircle, Globe, FileText, Users, Package, Eye } from "lucide-react";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const Services = () => {
+  const { ref: headerRef, isVisible: headerVisible } = useScrollReveal();
+  const { ref: whyRef, isVisible: whyVisible } = useScrollReveal();
+  const { ref: ctaRef, isVisible: ctaVisible } = useScrollReveal();
+
   const services = [
     {
       icon: Globe,
@@ -18,7 +23,7 @@ const Services = () => {
     },
     {
       icon: Users,
-      title: "Market Access & Trade Facilitation", 
+      title: "Market Access & Trade Facilitation",
       shortDescription: "Navigate international markets with expert trade facilitation support.",
       longDescription: "Selling overseas is about more than transport — it's about reaching the right buyers. With our network of international partners and trade facilitation experts, we help businesses identify target markets, meet import requirements abroad, and align shipments with buyer specifications. From navigating trade agreements to leveraging tariff advantages, we make sure your exports are competitive on a global scale. Whether you're expanding into one country or multiple regions, we create a clear path for your products to succeed."
     },
@@ -42,7 +47,7 @@ const Services = () => {
     },
     {
       icon: Warehouse,
-      title: "Warehousing & Distribution", 
+      title: "Warehousing & Distribution",
       shortDescription: "Secure, well-managed facilities to keep goods safe.",
       longDescription: "Storage is more than a place to keep goods — it's the backbone of an efficient supply chain. That's why our warehousing and distribution solutions are designed for both security and scalability. Our facilities are strategically located, climate-controlled, and monitored around the clock. Every product is tracked with advanced inventory management systems, ensuring accuracy from entry to dispatch. Beyond storage, we streamline distribution through tailored solutions: packaging, palletizing, labeling, and just-in-time dispatch. Whether your business requires short-term storage or long-term warehousing, our team ensures your goods are safe, organized, and always ready to move."
     },
@@ -62,16 +67,19 @@ const Services = () => {
 
   const whyChooseUs = [
     "End-to-end solutions covering every stage of freight movement",
-    "A team of experts who understand both logistics and compliance", 
+    "A team of experts who understand both logistics and compliance",
     "Secure facilities and trusted distribution networks",
     "Tech-enabled visibility for smarter decision-making",
     "A customer-first approach that prioritizes reliability and trust"
   ];
 
   return (
-    <section id="services" className="py-20 bg-background">
+    <section id="services" className="py-20 bg-background overflow-hidden">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
+        <div
+          ref={headerRef}
+          className={`text-center mb-16 transition-all duration-1000 ${headerVisible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"}`}
+        >
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
             Our Solutions for{" "}
             <span className="text-transparent bg-clip-text bg-gradient-accent">
@@ -83,38 +91,27 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="space-y-16 mb-20">
+        <div className="space-y-8 mb-20">
           {services.map((service, index) => (
-            <Card 
-              key={index} 
-              className="p-8 md:p-12 group hover:shadow-medium transition-all duration-300 border-border/50 hover:border-accent/20 animate-fade-in"
-              style={{animationDelay: `${index * 0.1}s`}}
-            >
-              <div className="flex flex-col md:flex-row items-start space-y-6 md:space-y-0 md:space-x-8">
-                <div className="w-16 h-16 bg-gradient-accent rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                  <service.icon className="w-8 h-8 text-accent-foreground" />
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4 group-hover:text-accent transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="text-lg text-muted-foreground leading-relaxed">
-                    {service.longDescription}
-                  </p>
-                </div>
-              </div>
-            </Card>
+            <ServiceCard key={index} service={service} index={index} />
           ))}
         </div>
 
         {/* Why Choose Us Section */}
-        <div className="text-center mb-16">
+        <div
+          ref={whyRef}
+          className={`text-center mb-16 transition-all duration-1000 ${whyVisible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"}`}
+        >
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12">
             Why Choose Us?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {whyChooseUs.map((reason, index) => (
-              <Card key={index} className="p-6 border-border/50 hover:border-accent/20 transition-colors">
+              <Card
+                key={index}
+                className={`p-6 border-border/50 hover:border-accent/20 hover:shadow-medium transition-all duration-500 hover:-translate-y-1 ${whyVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+                style={{ transitionDelay: `${index * 100 + 200}ms` }}
+              >
                 <div className="flex items-start space-x-4">
                   <CheckCircle className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
                   <p className="text-muted-foreground leading-relaxed">{reason}</p>
@@ -125,43 +122,82 @@ const Services = () => {
         </div>
 
         {/* Call to Action Section */}
-        <Card className="p-8 md:p-12 bg-gradient-accent text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-accent-foreground mb-6">
-            Get Started Today
-          </h2>
-          <p className="text-lg text-accent-foreground/80 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Your business deserves logistics solutions that are seamless, dependable, and built around your goals. With us, you gain more than a service provider — you gain a partner committed to making every shipment a success.
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <div className="flex items-center justify-center space-x-3 p-4 bg-white/10 rounded-lg">
-              <Phone className="w-5 h-5" />
-              <div className="text-left">
-                <p className="font-semibold">Call us today</p>
-                <p className="text-sm">09092926249, 08029667839</p>
-              </div>
+        <div
+          ref={ctaRef}
+          className={`transition-all duration-1000 ${ctaVisible ? "translate-y-0 opacity-100 scale-100" : "translate-y-12 opacity-0 scale-95"}`}
+        >
+          <Card className="p-8 md:p-12 bg-gradient-accent text-center relative overflow-hidden">
+            <div className="absolute inset-0 opacity-10">
+              <div className="w-full h-full bg-[radial-gradient(circle_at_30%_50%,white_0%,transparent_50%)]"></div>
             </div>
-            
-            <div className="flex items-center justify-center space-x-3 p-4 bg-white/10 rounded-lg">
-              <MapPin className="w-5 h-5" />
-              <div className="text-left">
-                <p className="font-semibold">Visit us at</p>
-                <p className="text-sm">4th Avenue, Nitel Estate, Grammar School, Ikorodu - Lagos</p>
-              </div>
-            </div>
-            
-            <div className="flex items-center justify-center space-x-3 p-4 bg-white/10 rounded-lg">
-              <MessageCircle className="w-5 h-5" />
-              <div className="text-left">
-                <p className="font-semibold">Get in touch</p>
-                <p className="text-sm">For a tailored consultation</p>
-              </div>
-            </div>
-          </div>
-        </Card>
+            <div className="relative z-10">
+              <h2 className="text-3xl md:text-4xl font-bold text-accent-foreground mb-6">
+                Get Started Today
+              </h2>
+              <p className="text-lg text-accent-foreground/80 mb-8 max-w-3xl mx-auto leading-relaxed">
+                Your business deserves logistics solutions that are seamless, dependable, and built around your goals. With us, you gain more than a service provider — you gain a partner committed to making every shipment a success.
+              </p>
 
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <div className="flex items-center justify-center space-x-3 p-4 bg-white/10 rounded-lg backdrop-blur-sm hover:bg-white/20 transition-colors duration-300">
+                  <Phone className="w-5 h-5" />
+                  <div className="text-left">
+                    <p className="font-semibold">Call us today</p>
+                    <p className="text-sm">09092926249, 08029667839</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-center space-x-3 p-4 bg-white/10 rounded-lg backdrop-blur-sm hover:bg-white/20 transition-colors duration-300">
+                  <MapPin className="w-5 h-5" />
+                  <div className="text-left">
+                    <p className="font-semibold">Visit us at</p>
+                    <p className="text-sm">4th Avenue, Nitel Estate, Grammar School, Ikorodu - Lagos</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-center space-x-3 p-4 bg-white/10 rounded-lg backdrop-blur-sm hover:bg-white/20 transition-colors duration-300">
+                  <MessageCircle className="w-5 h-5" />
+                  <div className="text-left">
+                    <p className="font-semibold">Get in touch</p>
+                    <p className="text-sm">For a tailored consultation</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Card>
+        </div>
       </div>
     </section>
+  );
+};
+
+const ServiceCard = ({ service, index }: { service: { icon: any; title: string; longDescription: string }; index: number }) => {
+  const { ref, isVisible } = useScrollReveal(0.1);
+  const isEven = index % 2 === 0;
+
+  return (
+    <div ref={ref}>
+      <Card
+        className={`p-8 md:p-12 group hover:shadow-strong transition-all duration-700 border-border/50 hover:border-accent/30 ${isVisible ? "translate-x-0 opacity-100" : isEven ? "-translate-x-16 opacity-0" : "translate-x-16 opacity-0"}`}
+      >
+        <div className="flex flex-col md:flex-row items-start space-y-6 md:space-y-0 md:space-x-8">
+          <div className="relative">
+            <div className="absolute -inset-2 bg-gradient-accent rounded-xl opacity-0 group-hover:opacity-30 blur-lg transition-opacity duration-500"></div>
+            <div className="relative w-16 h-16 bg-gradient-accent rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+              <service.icon className="w-8 h-8 text-accent-foreground" />
+            </div>
+          </div>
+          <div className="flex-1">
+            <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4 group-hover:text-accent transition-colors duration-300">
+              {service.title}
+            </h3>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              {service.longDescription}
+            </p>
+          </div>
+        </div>
+      </Card>
+    </div>
   );
 };
 

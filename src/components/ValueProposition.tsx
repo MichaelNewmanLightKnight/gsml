@@ -1,7 +1,12 @@
 import { Zap, Search, Shield, Users } from "lucide-react";
 import adeolaImage from "@/assets/adeola.jpg";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const ValueProposition = () => {
+  const { ref: headerRef, isVisible: headerVisible } = useScrollReveal();
+  const { ref: ceoRef, isVisible: ceoVisible } = useScrollReveal();
+  const { ref: valuesRef, isVisible: valuesVisible } = useScrollReveal();
+
   const values = [
     {
       icon: Zap,
@@ -26,11 +31,14 @@ const ValueProposition = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-muted/30">
+    <section id="about" className="py-20 bg-muted/30 overflow-hidden">
       <div className="container mx-auto px-6">
         {/* CEO Message Section */}
         <div className="mb-16">
-          <div className="text-center mb-12">
+          <div
+            ref={headerRef}
+            className={`text-center mb-12 transition-all duration-1000 ${headerVisible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"}`}
+          >
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
               We are Eager to Serve
             </h2>
@@ -38,50 +46,54 @@ const ValueProposition = () => {
               Building bridges to opportunity through innovative logistics
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <div className="relative order-2 lg:order-1">
-              <div className="relative overflow-hidden rounded-3xl shadow-elegant">
-                <img 
-                  src={adeolaImage} 
-                  alt="CEO of Great Success Multinational Logistics" 
-                  className="w-full h-[600px] object-cover object-top"
+
+          <div
+            ref={ceoRef}
+            className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-start transition-all duration-1000 delay-200 ${ceoVisible ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0"}`}
+          >
+            <div className="relative order-2 lg:order-1 group">
+              <div className="absolute -inset-4 bg-gradient-accent rounded-3xl opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-700"></div>
+              <div className="relative overflow-hidden rounded-3xl shadow-strong">
+                <img
+                  src={adeolaImage}
+                  alt="CEO of Great Success Multinational Logistics"
+                  className="w-full h-[600px] object-cover object-top transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
               </div>
             </div>
-            
+
             <div className="space-y-6 order-1 lg:order-2">
               <div className="prose prose-lg max-w-none">
                 <p className="text-lg text-muted-foreground leading-relaxed italic mb-6">
                   "At GSM Logistics (GSML), we believe logistics should be more than just moving goods from Point A to Point B — it should be an enabler of growth, clarity, and confidence."
                 </p>
-                
+
                 <p className="text-base text-muted-foreground leading-relaxed mb-4">
                   When I founded GSML, I saw firsthand the frustrations businesses faced in navigating Nigeria's ports, customs procedures, and supply chains. Delays, lack of transparency, and fragmented processes often stood in the way of progress. I knew there had to be a better way.
                 </p>
-                
+
                 <p className="text-base text-muted-foreground leading-relaxed mb-4">
                   That's why we built GSML to be different: tech-enabled, client-focused, and relentlessly innovative. We bring together deep expertise in freight forwarding, customs clearing, and supply chain management with cutting-edge technology that makes every step of the process visible and seamless.
                 </p>
-                
+
                 <p className="text-base text-muted-foreground leading-relaxed mb-4">
                   Our mission is simple: to make trade easier, faster, and more transparent for businesses in Nigeria and across Africa. Whether you're a small business importing your first container, or a multinational managing complex supply chains, we provide the clarity and speed you need to thrive.
                 </p>
-                
+
                 <p className="text-base text-muted-foreground leading-relaxed mb-4">
                   But at GSML, we are more than just a logistics provider. We see ourselves as partners in progress. Every shipment entrusted to us carries not just goods, but the ambitions of the people behind them. That responsibility fuels our commitment to excellence, reliability, and innovation.
                 </p>
-                
+
                 <p className="text-base text-muted-foreground leading-relaxed mb-4">
                   Looking ahead, we are expanding our capabilities with upcoming bonded terminal operations and smarter digital tools — designed to give our clients even greater efficiency and control.
                 </p>
-                
+
                 <p className="text-base text-muted-foreground leading-relaxed mb-6">
                   To our clients, partners, and stakeholders: thank you for trusting GSML. Together, we are building a future where logistics is no longer a barrier, but a bridge to opportunity.
                 </p>
-                
-                <div className="border-l-4 border-primary pl-6 mt-8">
+
+                <div className="border-l-4 border-accent pl-6 mt-8 hover:border-primary transition-colors duration-500">
                   <p className="text-base font-medium text-primary mb-1">
                     With commitment and vision,
                   </p>
@@ -98,14 +110,14 @@ const ValueProposition = () => {
         </div>
 
         {/* Values Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div ref={valuesRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {values.map((value, index) => (
-            <div 
-              key={index} 
-              className="text-center group cursor-pointer animate-fade-in"
-              style={{animationDelay: `${index * 0.2}s`}}
+            <div
+              key={index}
+              className={`text-center group cursor-pointer p-8 rounded-2xl bg-background/80 backdrop-blur-sm border border-border/50 hover:border-accent/30 hover:shadow-medium transition-all duration-500 ${valuesVisible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"}`}
+              style={{ transitionDelay: `${index * 150}ms` }}
             >
-              <div className="w-16 h-16 mx-auto mb-6 bg-gradient-accent rounded-2xl flex items-center justify-center shadow-soft group-hover:shadow-glow transition-all duration-300 group-hover:scale-110">
+              <div className="w-16 h-16 mx-auto mb-6 bg-gradient-accent rounded-2xl flex items-center justify-center shadow-soft group-hover:shadow-glow transition-all duration-500 group-hover:scale-110 group-hover:rotate-3">
                 <value.icon className="w-8 h-8 text-accent-foreground" />
               </div>
               <h3 className="text-xl font-semibold text-primary mb-4 group-hover:text-accent transition-colors">
