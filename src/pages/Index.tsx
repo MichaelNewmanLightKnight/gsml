@@ -6,6 +6,7 @@ import Industries from "@/components/Industries";
 import BondedTerminal from "@/components/BondedTerminal";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const Index = () => {
   return (
@@ -18,6 +19,7 @@ const Index = () => {
       <BondedTerminal />
       <Contact />
       <Footer />
+      <ScrollToTop />
     </div>
   );
 };
