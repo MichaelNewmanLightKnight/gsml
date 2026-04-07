@@ -92,6 +92,38 @@ export default {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-10px)" },
         },
+        "shimmer": {
+          "0%": { backgroundPosition: "-200% 0" },
+          "100%": { backgroundPosition: "200% 0" },
+        },
+        "glow-pulse": {
+          "0%, 100%": { boxShadow: "0 0 20px hsl(16 100% 60% / 0.3), 0 0 60px hsl(16 100% 60% / 0.1)" },
+          "50%": { boxShadow: "0 0 40px hsl(16 100% 60% / 0.5), 0 0 80px hsl(16 100% 60% / 0.2)" },
+        },
+        "gradient-shift": {
+          "0%, 100%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+        },
+        "slide-in-left": {
+          "0%": { opacity: "0", transform: "translateX(-60px)" },
+          "100%": { opacity: "1", transform: "translateX(0)" },
+        },
+        "slide-in-right": {
+          "0%": { opacity: "0", transform: "translateX(60px)" },
+          "100%": { opacity: "1", transform: "translateX(0)" },
+        },
+        "scale-up": {
+          "0%": { opacity: "0", transform: "scale(0.8)" },
+          "100%": { opacity: "1", transform: "scale(1)" },
+        },
+        "rotate-in": {
+          "0%": { opacity: "0", transform: "rotate(-10deg) scale(0.9)" },
+          "100%": { opacity: "1", transform: "rotate(0deg) scale(1)" },
+        },
+        "text-reveal": {
+          "0%": { clipPath: "inset(0 100% 0 0)" },
+          "100%": { clipPath: "inset(0 0% 0 0)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -99,6 +131,14 @@ export default {
         "fade-in": "fade-in 0.6s ease-out",
         "slide-up": "slide-up 0.8s ease-out",
         "float": "float 3s ease-in-out infinite",
+        "shimmer": "shimmer 2.5s ease-in-out infinite",
+        "glow-pulse": "glow-pulse 2s ease-in-out infinite",
+        "gradient-shift": "gradient-shift 4s ease infinite",
+        "slide-in-left": "slide-in-left 0.8s ease-out",
+        "slide-in-right": "slide-in-right 0.8s ease-out",
+        "scale-up": "scale-up 0.6s ease-out",
+        "rotate-in": "rotate-in 0.8s ease-out",
+        "text-reveal": "text-reveal 1s ease-out forwards",
       },
       backgroundImage: {
         "gradient-primary": "var(--gradient-primary)",
