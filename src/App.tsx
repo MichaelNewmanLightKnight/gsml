@@ -11,6 +11,7 @@ import IndustriesPage from "./pages/Industries";
 import ContactPage from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import Learn from "./pages/Learn";
+import Clients from "./pages/Clients";
 import FullArticles from "./components/learn/FullArticles";
 
 const queryClient = new QueryClient();
@@ -28,6 +29,7 @@ const App = () => (
             <Route path="/industries" element={<IndustriesPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/learn" element={<Learn />} />
+            <Route path="/clients" element={<Clients />} />
             <Route path="/articles" element={<FullArticles />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
