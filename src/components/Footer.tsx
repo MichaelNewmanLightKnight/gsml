@@ -37,6 +37,7 @@ const Footer = () => {
               <li>Apapa, Lagos</li>
               <li>234 802 966 7839</li>
               <li>info@gsmlogistics.com.ng</li>
+              <li>www.gsmlogistics.com.ng</li>
             </ul>
           </div>
         </div>
