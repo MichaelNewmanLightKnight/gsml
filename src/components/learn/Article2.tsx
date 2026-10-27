@@ -78,7 +78,7 @@ const Article2 = () => {
                       </p>
                       <div className="bg-success/10 border border-success/20 p-4 rounded-lg">
                         <p className="text-success font-medium">
-                          <strong>Solution:</strong> Use warehouses or bonded terminals.
+                          <strong>Solution:</strong> Use bonded warehouses.
                         </p>
                       </div>
                     </div>
