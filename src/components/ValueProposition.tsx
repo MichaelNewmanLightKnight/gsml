@@ -96,7 +96,7 @@ const ValueProposition = () => {
                 </p>
 
                 <p className="text-base text-muted-foreground leading-relaxed mb-4">
-                  Looking ahead, we are expanding our capabilities with upcoming bonded terminal operations and smarter digital tools — designed to give our clients even greater efficiency and control.
+                  Looking ahead, we are expanding our capabilities with smarter digital tools — designed to give our clients even greater efficiency and control.
                 </p>
 
                 <p className="text-base text-muted-foreground leading-relaxed mb-6">

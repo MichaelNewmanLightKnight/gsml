@@ -24,7 +24,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      details: "info@gsmlogistics.site",
+      details: "info@gsmlogistics.com.ng",
       action: "Send Email"
     },
     {

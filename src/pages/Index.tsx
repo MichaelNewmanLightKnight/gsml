@@ -3,7 +3,6 @@ import Hero from "@/components/Hero";
 import ValueProposition from "@/components/ValueProposition";
 import Services from "@/components/Services";
 import Industries from "@/components/Industries";
-import BondedTerminal from "@/components/BondedTerminal";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
@@ -16,7 +15,6 @@ const Index = () => {
       <ValueProposition />
       <Services />
       <Industries />
-      <BondedTerminal />
       <Contact />
       <Footer />
       <ScrollToTop />
